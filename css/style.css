@@ -653,7 +653,6 @@ body.menu .nav {
 .about__more {
   text-decoration: underline #bebebe;
   cursor: pointer;
-  display: none;
 }
 
 /***************/
