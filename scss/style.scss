@@ -523,7 +523,7 @@ body.menu {
     margin-right: 15px;
     margin-left: 15px;
     position: relative;
-    transform: scale(0.25);
+    transform: scale(0.01);
     transition: transform .3s;
     &::after {
       content: "";
@@ -538,11 +538,11 @@ body.menu {
       position: absolute;
       width: 128%;
       top: 50%;
-      transform: translateY(-50%) scale(0.25);
+      transform: translateY(-50%) scale(0.01);
       right: 0;
       pointer-events: none;
       opacity: 0;
-      transition: opacity .6s, transform .6s cubic-bezier(0.15, 0.5, 0.32, 1.25);
+      transition: opacity .6s, transform .6s cubic-bezier(0, 0, 0.32, 1.25);
       transition-delay: .15s, .15s;
     }
   }
@@ -837,7 +837,7 @@ body.menu {
     width: calc(50% - 55px);
     height: 29.167vw;
     margin-right: 15px;
-    transform: scale(0.25);
+    transform: scale(0.01);
     transition: transform .3s;
     &::before {
       content: "";
@@ -853,8 +853,8 @@ body.menu {
       right: 0;
       top: 50%;
       opacity: 0;
-      transform: translateY(-50%) scale(0.25);
-      transition: opacity .6s, transform .6s cubic-bezier(0.15, 0.5, 0.32, 1.25);
+      transform: translateY(-50%) scale(0.01);
+      transition: opacity .6s, transform .6s cubic-bezier(0, 0, 0.32, 1.25);
       transition-delay: .15s, .15s;
     }
   }
