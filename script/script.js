@@ -40,7 +40,7 @@ APP.$document.ready(function() {
 
 	APP.navItem.on('click', function(){
 		var section = $(this).data('scroll'),
-				scrollTo = $(section).position().top;
+				scrollTo = $(section).offset().top;
 
 		$('html').animate({ scrollTop: scrollTo }, 500);
 	});

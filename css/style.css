@@ -694,7 +694,7 @@ body.menu .nav {
   right: 0;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.45s, transform 0.45s cubic-bezier(0, 0.32, 0, 1.82);
+  transition: opacity 0.6s, transform 0.6s cubic-bezier(0.15, 0.5, 0.32, 1.25);
   transition-delay: .15s, .15s;
 }
 
@@ -1040,7 +1040,7 @@ body.menu .nav {
   top: 50%;
   opacity: 0;
   transform: translateY(-50%) scale(0.01);
-  transition: opacity 0.45s, transform 0.45s cubic-bezier(0, 0.32, 0, 1.82);
+  transition: opacity 0.6s, transform 0.6s cubic-bezier(0.15, 0.5, 0.32, 1.25);
   transition-delay: .15s, .15s;
 }
 
