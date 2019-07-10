@@ -44,6 +44,7 @@ APP.$document.ready(function() {
 
 		$('html').animate({ scrollTop: scrollTo }, 500);
 		$('body').removeClass('menu');
+		APP.hamburger.removeClass('active');
 	});
 
 	APP.aboutMore.on('click', function(){
