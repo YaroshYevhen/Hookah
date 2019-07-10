@@ -53,7 +53,6 @@ APP.$document.ready(function() {
 	APP.hamburger.on('click', function(){
     $(this).toggleClass('active');
     $('body').toggleClass('menu');
-    $('html').toggleClass('overflow');
   });
   
 	APP.modal.on('click', function(event){

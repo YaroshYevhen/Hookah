@@ -145,9 +145,6 @@
 			}
 		}
 	}
-	.contacts {
-		margin-bottom: 160px;
-	}
 	.address {
 		max-width: 1110px;
 		margin-bottom: 70px;
@@ -519,6 +516,10 @@
 	}
 	.about {
 		margin-bottom: 80px;
+		&__btn {
+			margin-left: auto;
+			margin-right: auto;
+		}
 		&-item {
 			& + .about-item {
 				margin-top: 80px;
