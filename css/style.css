@@ -1047,6 +1047,7 @@ body.menu .nav {
 .articles-item {
   width: 720px;
   height: 160px;
+  cursor: pointer;
 }
 
 .articles .slick-slide {
@@ -1092,7 +1093,6 @@ body.menu .nav {
 .articles__more {
   float: left;
   text-decoration: underline #d5d5d5;
-  cursor: pointer;
   transition: font-size .3s, text-decoration .3s;
 }
 

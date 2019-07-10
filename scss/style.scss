@@ -861,6 +861,7 @@ body.menu {
   &-item {
     width: 720px;
     height: 160px;
+    cursor: pointer;
   }
   .slick-slide {
     margin-bottom: 40px;
@@ -898,7 +899,6 @@ body.menu {
   &__more {
     float: left;
     text-decoration: underline #d5d5d5;
-    cursor: pointer;
     transition: font-size .3s, text-decoration .3s;
   }
   &__date {

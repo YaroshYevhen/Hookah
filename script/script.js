@@ -5,7 +5,7 @@ APP.scrollUp = $('.scroll-up');
 APP.modal = $('.modal');
 APP.closeModal = $('.modal-close');
 APP.modalBtn = $('.modal-btn');
-APP.articleBtn = $('.articles__more');
+APP.articleBtn = $('.articles-item');
 APP.articleOpen = $('.articles-open');
 APP.articleClose = $('.articles-open__back');
 APP.articlesSlider = $('.articles-slider');
@@ -78,11 +78,10 @@ APP.$document.ready(function() {
 	});
 
 	APP.articleBtn.on('click', function(){
-		var parent = $(this).parents('.articles-item'),
-				photo = parent.find('.articles-photo').attr('style'),
-				title = parent.find('.articles__subtitle').text(),
-				text = parent.find('.articles-text p').html(),
-				date = parent.find('.articles__date').text();
+		var photo = $(this).find('.articles-photo').attr('style'),
+				title = $(this).find('.articles__subtitle').text(),
+				text = $(this).find('.articles-text p').html(),
+				date = $(this).find('.articles__date').text();
 
 		APP.articleOpen.find('.articles-open__photo').attr('style', photo);
 		APP.articleOpen.find('.articles__subtitle').text(title);
