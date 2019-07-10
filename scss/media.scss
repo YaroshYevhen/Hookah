@@ -183,6 +183,7 @@
 			flex-wrap: nowrap;
 			background-color: #3b3b3b;
 			padding: 70px 0px;
+			overflow-y: scroll;
 		}
 		&-li {
 			& + .nav-li {
