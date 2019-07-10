@@ -818,7 +818,7 @@ body.menu {
         transition-delay: .3s;
       }
     }
-    .slider-container.hide {
+    &.hide {
       .slick-list {
         opacity: 0;
         transition: opacity .3s;

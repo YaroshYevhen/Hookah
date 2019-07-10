@@ -154,9 +154,6 @@
   .hamburger {
     display: block;
   }
-  .header {
-    overflow-y: scroll;
-  }
   .nav {
     width: 100%;
     height: calc(100vh - 90px);
@@ -338,10 +335,10 @@
     margin-right: 0;
     margin-bottom: 70px;
   }
-  .articles-slider .slider-container.hide .slick-prev {
+  .articles-slider.hide .slick-prev {
     transform: translateX(calc(0% - 5px)) scale(0.01);
   }
-  .articles-slider .slider-container.hide .slick-next {
+  .articles-slider.hide .slick-next {
     transform: translateX(calc(100% + 5px)) scale(0.01);
   }
   .articles-img {
@@ -579,6 +576,18 @@
     height: 350px;
     width: 360px;
     margin-bottom: 55px;
+    transition: height .3s;
+    transition-delay: 0s;
+  }
+  .articles-slider.hide {
+    height: 600px;
+    transition-delay: .3s;
+  }
+  .articles-slider.hide .slick-arrow {
+    transition-delay: 0s;
+  }
+  .articles-slider .slick-arrow {
+    transition-delay: .3s;
   }
   .articles-item {
     height: 350px;

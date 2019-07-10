@@ -1001,17 +1001,17 @@ body.menu .nav {
   transition-delay: .3s;
 }
 
-.articles-slider .slider-container.hide .slick-list {
+.articles-slider.hide .slick-list {
   opacity: 0;
   transition: opacity .3s;
   transition-delay: 0s;
 }
 
-.articles-slider .slider-container.hide .slick-prev {
+.articles-slider.hide .slick-prev {
   transform: translateY(calc(-100% - 25px)) scale(0.01);
 }
 
-.articles-slider .slider-container.hide .slick-next {
+.articles-slider.hide .slick-next {
   transform: translateY(-15px) scale(0.01);
 }
 
