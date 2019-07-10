@@ -1246,7 +1246,7 @@ body.menu .nav {
   color: #0e0e0e;
   border-radius: 5px;
   padding: 20px;
-  transition: border .3s, background-color .3s, width .6s linear;
+  transition: border .3s, background-color .3s, width .6s linear, opacity .6s;
 }
 
 .contacts__input::placeholder {
@@ -1469,6 +1469,11 @@ body.menu .nav {
 
 .modal .contacts-form {
   margin-bottom: 0;
+}
+
+.modal .contacts__input {
+  width: 100% !important;
+  opacity: 1 !important;
 }
 
 .modal-close {
