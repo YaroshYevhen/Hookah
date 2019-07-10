@@ -43,6 +43,7 @@ APP.$document.ready(function() {
 				scrollTo = $(section).offset().top;
 
 		$('html').animate({ scrollTop: scrollTo }, 500);
+		$('body').removeClass('menu');
 	});
 
 	APP.aboutMore.on('click', function(){
