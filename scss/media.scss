@@ -163,6 +163,9 @@
 	.hamburger {
 		display: block;
 	}
+	.header {
+		overflow-y: scroll;
+	}
 	.nav {
 		width: 100%;
 		height: calc(100vh - 90px);
@@ -183,7 +186,6 @@
 			flex-wrap: nowrap;
 			background-color: #3b3b3b;
 			padding: 70px 0px;
-			overflow-y: scroll;
 		}
 		&-li {
 			& + .nav-li {
