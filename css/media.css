@@ -5,15 +5,39 @@
   .address__link:hover {
     color: #26c2cf;
   }
+  .slick-arrow:hover,
+  .scroll-up:hover {
+    color: #26c2cf;
+  }
   .standart-btn:hover {
     transform: scale(1.05);
     background-color: #28cbd9;
   }
+  .articles-item:hover .articles__more {
+    text-decoration: underline #bcbcbc;
+    font-size: 18px;
+  }
+  .articles-open__back:hover {
+    font-size: 18px;
+  }
+  .articles-open__back:hover:before {
+    width: 7px;
+    height: 7px;
+  }
   .contacts__consent:hover span:before {
     background-color: #f7f7f7;
   }
-  .socials__item:hover {
+  .icon-inst:hover {
     color: #ff29de;
+  }
+  .icon-fb:hover {
+    color: #3b5998;
+  }
+  .icon-vb:hover {
+    color: #574e92;
+  }
+  .icon-wa:hover {
+    color: #00e676;
   }
   .footer a:hover {
     color: #fff;
@@ -192,17 +216,24 @@
     right: -30px;
   }
   .about-img {
-    order: -1;
     width: 690px;
     height: 450px;
     margin-bottom: 60px;
   }
   .about-text {
+    order: 1;
     width: 100%;
     max-width: 720px;
     margin-right: 0;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .about__title {
+    display: none;
+  }
+  .about__title_tablet {
+    text-align: center;
+    display: block;
   }
   .about-item:nth-of-type(even) .about-text {
     padding-left: 15px;
@@ -405,10 +436,6 @@
   .footer a + a {
     margin-left: 30px;
   }
-  .scroll-up {
-    right: 15px;
-    bottom: 255px;
-  }
   .modal .contacts-form {
     width: 500px;
     padding: 70px 60px;
@@ -483,6 +510,10 @@
   }
   .about__description.show {
     max-height: 600px;
+  }
+  .about__more {
+    display: block;
+    margin-top: 15px;
   }
   .gallery {
     margin-bottom: 80px;
@@ -595,7 +626,10 @@
     margin-top: 20px;
   }
   .contacts__consent span::before {
-    top: 1px;
+    top: 10px;
+  }
+  .contacts__consent input:checked + span:after {
+    top: 14px;
   }
   .contacts-btn {
     margin-top: 20px;
@@ -620,21 +654,24 @@
     margin-left: 0;
     margin-top: 5px;
   }
+  .modal__title {
+    font-size: 28px;
+  }
   .modal .contacts-form {
     max-width: 360px;
     padding: 45px 30px;
     border-radius: 0;
   }
   .modal .contacts__name {
-    margin-top: 20px;
+    margin-top: 25px;
   }
   .modal .contacts__communication {
-    margin-top: 15px;
+    margin-top: 20px;
   }
   .modal .contacts__text {
-    margin-top: 15px;
+    margin-top: 20px;
   }
   .modal__btn {
-    margin-top: 20px;
+    margin-top: 25px;
   }
 }

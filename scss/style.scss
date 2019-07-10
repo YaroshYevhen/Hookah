@@ -242,9 +242,10 @@ input[type="checkbox"] {
   color: #fff;
   cursor: pointer;
   position: fixed;
-  right: 68px;
-  bottom: 130px;
+  right: 30px;
+  bottom: 30px;
   z-index: 100;
+  transition: color .3s;
   &.show {
     display: flex;
   }
@@ -339,6 +340,7 @@ body.menu {
   padding: 0 50px;
   margin-bottom: -90px;
   transition: background-color .3s;
+  z-index: 2;
   &-logo {
     position: relative;
     transition: filter .3s;
@@ -391,6 +393,11 @@ body.menu {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity .6s;
+  &.animate {
+    opacity: 1;
+  }
   &__img {
     display: block;
     width: 1370px;
@@ -405,9 +412,27 @@ body.menu {
   width: calc(100% - 250px);
   flex-wrap: nowrap;
   margin-bottom: 240px;
+  &.animate {
+    .features-item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   &-item {
     flex-wrap: nowrap;
     max-width: 25%;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform .6s, opacity .6s;
+    &:nth-of-type(2) {
+      transition-delay: .1s;
+    }
+    &:nth-of-type(3) {
+      transition-delay: .2s;
+    }
+    &:nth-of-type(4) {
+      transition-delay: .3s;
+    }
   }
   &__icon {
     font-size: 70px;
@@ -429,6 +454,18 @@ body.menu {
   &-item {
     flex-wrap: nowrap;
     height: auto;
+    &.animate {
+      .about-img {
+        transform: scale(1);
+        img {
+          opacity: 1;
+          transform: translateY(-50%) scale(1);
+        }
+      }
+      .about-text {
+        opacity: 1;
+      }
+    }
     & + .about-item {
       margin-top: 200px;
     }
@@ -468,12 +505,17 @@ body.menu {
     padding-left: calc(14vw - 95px);
     flex-wrap: nowrap;
     margin-right: 15px;
+    opacity: 0;
+    transition: opacity .6s;
   }
   &__title {
     margin-bottom: 40px;
     width: 100%;
     position: relative;
     z-index: 1;
+    &_tablet {
+      display: none;
+    }
   }
   &-img {
     width: calc(50% - 15px);
@@ -481,6 +523,8 @@ body.menu {
     margin-right: 15px;
     margin-left: 15px;
     position: relative;
+    transform: scale(0.01);
+    transition: transform .3s;
     &::after {
       content: "";
       width: 100%;
@@ -494,9 +538,12 @@ body.menu {
       position: absolute;
       width: 128%;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-50%) scale(0.01);
       right: 0;
       pointer-events: none;
+      opacity: 0;
+      transition: opacity .45s, transform .45s cubic-bezier(0, 0.32, 0, 1.82);
+      transition-delay: .15s, .15s;
     }
   }
   &__btn {
@@ -505,6 +552,7 @@ body.menu {
   &__more {
     text-decoration: underline #bebebe;
     cursor: pointer;
+    display: none;
   }
 }
 
@@ -514,6 +562,11 @@ body.menu {
 .gallery {
   width: 100%;
   margin-bottom: 200px;
+  &.animate {
+    .slick-list {
+      transform: translateX(0);
+    }
+  }
   &-title {
     text-align: center;
     margin-bottom: 40px;
@@ -525,6 +578,10 @@ body.menu {
     height: 600px;
     margin-right: 1px;
   }
+  .slick-list {
+    transform: translateX(50%);
+    transition: transform .6s cubic-bezier(0.06, 0.65, 0.21, 0.89);
+  }
 }
 
 /***************/
@@ -533,6 +590,11 @@ body.menu {
 .clients {
   width: 100%;
   margin-bottom: 200px;
+  &.animate {
+    .slick-list {
+      transform: translateX(0);
+    }
+  }
   &-title {
     text-align: center;
     margin-bottom: 40px;
@@ -546,11 +608,16 @@ body.menu {
     background-color: rgb(246, 246, 246);
     border-radius: 5px;
     padding: 15px 30px;
-    margin-right: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
     img {
       max-height: 100%;
       max-width: 100%;
     }
+  }
+  .slick-list {
+    transform: translateX(50%);
+    transition: transform .6s cubic-bezier(0.06, 0.65, 0.21, 0.89);
   }
 }
 
@@ -561,6 +628,12 @@ body.menu {
   width: 100%;
   margin-bottom: 200px;
   position: relative;
+  &.animate {
+    .price-item {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   &-background {
     position: absolute;
     z-index: 0;
@@ -586,11 +659,23 @@ body.menu {
     background-color: #1b1b1b;
     padding: 2.85vw 3.65vw 3.1vw;
     flex-wrap: nowrap;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: transform .6s cubic-bezier(0.03, 0.78, 0.02, 1.65), opacity .6s;
     &:first-of-type {
       padding-top: calc(2.85vw + 15px);
       .price__icons {
         margin-bottom: calc(2.6vw - 15px);
       }
+    }
+    &:nth-of-type(2) {
+      transition-delay: .1s
+    }
+    &:nth-of-type(3) {
+      transition-delay: .2s
+    }
+    &:nth-of-type(4) {
+      transition-delay: .3s
     }
   }
   &__icons {
@@ -645,6 +730,15 @@ body.menu {
   width: 100%;
   margin-bottom: 220px;
   position: relative;
+  &.animate {
+    .events__video {
+      transform: scale(1);
+      opacity: 1;
+    }
+    .slick-list {
+      transform: translateX(0);
+    }
+  }
   &-title {
     position: relative;
     text-align: center;
@@ -658,6 +752,9 @@ body.menu {
     width: 100%;
     height: 100%;
     margin-bottom: 20px;
+    transform: scale(0.01);
+    opacity: 0;
+    transition: opacity .6s, transform .6s;
   }
   &-slider {
     margin-top: -194px;
@@ -672,6 +769,10 @@ body.menu {
     background-repeat: no-repeat;
     margin-left: 30px;
   }
+  .slick-list {
+    transform: translateX(100%);
+    transition: transform .6s cubic-bezier(0.06, 0.65, 0.21, 0.89);
+  }
 }
 
 /***************/
@@ -681,6 +782,18 @@ body.menu {
   width: 100%;
   margin-bottom: 240px;
   position: relative;
+  &.animate {
+    .articles-slider {
+      opacity: 1;
+    }
+    .articles-img {
+      transform: scale(1);
+      img {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+      }
+    }
+  }
   &-title {
     position: relative;
     text-align: center;
@@ -697,6 +810,8 @@ body.menu {
     padding-left: calc(14vw - 98px);
     margin-right: 45px;
     z-index: 2;
+    opacity: 0;
+    transition: opacity .6s;
     .slider-container {
       .slick-list {
         transition: opacity .3s;
@@ -721,8 +836,9 @@ body.menu {
     position: relative;
     width: calc(50% - 55px);
     height: 29.167vw;
-    
     margin-right: 15px;
+    transform: scale(0.01);
+    transition: transform .3s;
     &::before {
       content: "";
       position: absolute;
@@ -736,7 +852,10 @@ body.menu {
       position: absolute;
       right: 0;
       top: 50%;
-      transform: translateY(-50%);
+      opacity: 0;
+      transform: translateY(-50%) scale(0.01);
+      transition: opacity .45s, transform .45s cubic-bezier(0, 0.32, 0, 1.82);
+      transition-delay: .15s, .15s;
     }
   }
   &-item {
@@ -780,6 +899,7 @@ body.menu {
     float: left;
     text-decoration: underline #d5d5d5;
     cursor: pointer;
+    transition: font-size .3s, text-decoration .3s;
   }
   &__date {
     float: right;
@@ -855,6 +975,8 @@ body.menu {
       padding-left: 15px;
       margin-bottom: 15px;
       cursor: pointer;
+      transition: font-size .3s;
+      line-height: 20px;
       span {
         text-decoration: underline #bebebe;
       }
@@ -862,12 +984,13 @@ body.menu {
         content: "";
         position: absolute;
         left: 1px;
-        top: 50%;
+        top: 7px;
         width: 6px;
         height: 6px;
         border-bottom: 1px solid #7d7d7d;
         border-left: 1px solid #7d7d7d;
-        transform: rotate(45deg) translateY(-50%);
+        transform: rotate(45deg);
+        transition: height .3s, width .3s;
       }
     }
   }
@@ -893,10 +1016,15 @@ body.menu {
   }
   &-form {
     width: 520px;
+    &.animate {
+      .contacts__input {
+        width: 100%;
+      }
+    }
   }
   &__input {
     font-size: 16px;
-    width: 100%;
+    width: 51%;
     z-index: 1;
     border: none;
     background-color: #f7f7f7;
@@ -904,7 +1032,7 @@ body.menu {
     color: #0e0e0e;
     border-radius: 5px;
     padding: 20px;
-    transition: border .3s, background-color .3s;
+    transition: border .3s, background-color .3s, width .6s linear;
     &::placeholder {
       color: #b3b3b3;
     }
@@ -924,11 +1052,13 @@ body.menu {
   &__communication {
     height: 52px;
     margin-top: 27px;
+    transition-delay: 0s, 0s, .15s;
   }
   &__text {
     height: 120px;
     margin-top: 27px;
     resize: none;
+    transition-delay: 0s, 0s, .3s;
   }
   &__consent {
     font-size: 16px;
@@ -990,6 +1120,11 @@ body.menu {
     width: calc(100% - 520px);
     height: 100%;
     position: relative;
+    opacity: 0;
+    transition: opacity .6s;
+    &.animate {
+      opacity: 1;
+    }
     img {
       position: absolute;
       right: 0;
@@ -1005,6 +1140,11 @@ body.menu {
   max-width: 1370px;
   height: 60px;
   margin-bottom: 140px;
+  opacity: 0;
+  transition: opacity .6s;
+  &.animate {
+    opacity: 1;
+  }
   &-item {
     height: 100%;
     line-height: 1;
@@ -1090,6 +1230,9 @@ body.menu {
     margin-top: 40px;
     text-align-last: center;
   }
+  .contacts-form {
+    margin-bottom: 0;
+  }
 }
 
 .modal-close {
@@ -1137,5 +1280,40 @@ body.menu {
     font-size: 14px;
     text-decoration: underline #383838;
     transition: color .3s, text-decoration .3s;
+  }
+}
+
+
+/**************/
+/* politics */
+
+.politics {
+  background: #fff;
+  max-width: 940px;
+  margin: 1em auto;
+  border: 1px solid #ccc;
+  padding: 1em 2%;
+  h1 {
+    color: #006dad;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    line-height: 48px;
+  }
+  h2 {
+    color: #444;
+    font-size: 1.8em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    text-align: center;
+  }
+  p {
+    color: #333;
+    padding: 0 0 0.5em;
+    font: 1em Arial;
+    line-height: 150%;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
   }
 }

@@ -6,7 +6,7 @@
   height: 60px;
   text-align: center;
   background-color: #3b3b3b;
-  transition: border-color .3s, box-shadow .3s, transform .3s;
+  transition: border-color .3s, box-shadow .3s, transform .3s, color .3s;
   position: absolute;
   font-size: 32px;
   top: 50%;

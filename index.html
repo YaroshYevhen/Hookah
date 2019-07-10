@@ -21,24 +21,24 @@
 		</div>
 		<nav class="nav">
 			<ul class="nav-ul flex-between">
-				<li class="nav-li"><span class="nav__item">О компании</span></li>
-				<li class="nav-li"><span class="nav__item">Галерея</span></li>
-				<li class="nav-li"><span class="nav__item">Наши клиенты</span></li>
-				<li class="nav-li"><span class="nav__item">Цены</span></li>
-				<li class="nav-li"><span class="nav__item">Отзывы</span></li>
-				<li class="nav-li"><span class="nav__item">новости</span></li>
-				<li class="nav-li"><span class="nav__item">Контакты</span></li>
+				<li class="nav-li"><span class="nav__item" data-scroll=".about">О компании</span></li>
+				<li class="nav-li"><span class="nav__item" data-scroll=".gallery">Галерея</span></li>
+				<li class="nav-li"><span class="nav__item" data-scroll=".clients">Наши клиенты</span></li>
+				<li class="nav-li"><span class="nav__item" data-scroll=".price">Цены</span></li>
+				<li class="nav-li"><span class="nav__item" data-scroll=".events">Мероприятия</span></li>
+				<li class="nav-li"><span class="nav__item" data-scroll=".articles">новости</span></li>
+				<li class="nav-li"><span class="nav__item" data-scroll=".contacts">Контакты</span></li>
 			</ul>
 		</nav>
 		<a href="tel:+7 495 374-61-62" class="header-tel">+7 (495) 374-61-62</a>
 	</header>
 
 	<main>
-		<section class="big-logo" style="background-image: url(img/background.jpg);">
+		<section class="big-logo js-animation" style="background-image: url(img/background.jpg);">
 			<img src="img/logo-big.png" alt="logo" class="big-logo__img mx-auto">
 			<button class="standart-btn mx-auto modal-btn" data-target="catering">заказать кейтеринг</button>
 		</section>
-		<section class="features mx-auto flex-between">
+		<section class="features mx-auto flex-between js-animation">
 			<div class="features-item flex-c">
 				<div class="features__icon icon-features-1"></div>
 				<p class="features__text">Большой парк <br>кальянов</p>
@@ -57,7 +57,8 @@
 			</div>
 		</section>
 		<section class="about">
-			<div class="about-item flex-c-c">
+			<div class="about-item js-animation flex-c-c">
+				<h1 class="about__title_tablet about__title title-l">о компании</h1>
 				<div class="about-text flex-column">
 					<h1 class="about__title title-l">о компании</h1>
 					<p class="about__description">Думаете, как приукрасить вечеринку или домашнее мероприятие, а может у вас намечается деловая встреча, которая нуждается в расслабляющей минутке. Есть отличное предложение. Оригинальная и современная на сегодня услуга – это кальянный кейтеринг.
@@ -69,7 +70,8 @@
 				</div>
 				<div class="about-img"><img src="img/about-1.png"></div>
 			</div>
-			<div class="about-item flex-c-c">
+			<div class="about-item js-animation flex-c-c">
+				<h1 class="about__title_tablet about__title title-l">Кейтеринг</h1>
 				<div class="about-text flex-column">
 					<h1 class="about__title title-l">Кейтеринг</h1>
 					<p class="about__description">Кальянный кейтеринг – расслабляющее мероприятие для гостей, которое идеально подходит, чтобы насладится общением друзей после великолепного ужина или просто поболтать и поделится новостями. Великолепные восточные нотки подарят массу положительных впечатлений, а экзотический окрас хорошего и качественно подобранного табака успокоит и придаст бодрости.
@@ -80,7 +82,8 @@
 				</div>
 				<div class="about-img"><img src="img/about-2.png"></div>
 			</div>
-			<div class="about-item flex-c-c">
+			<div class="about-item js-animation flex-c-c">
+				<h1 class="about__title_tablet about__title title-l">аутсорсинг</h1>
 				<div class="about-text flex-column">
 					<h1 class="about__title title-l">аутсорсинг</h1>
 					<p class="about__description">Кальянный кейтеринг – расслабляющее мероприятие для гостей, которое идеально подходит, чтобы насладится общением друзей после великолепного ужина или просто поболтать и поделится новостями. Великолепные восточные нотки подарят массу положительных впечатлений, а экзотический окрас хорошего и качественно подобранного табака успокоит и придаст бодрости.
@@ -92,7 +95,7 @@
 				<div class="about-img"><img src="img/about-3.png"></div>
 			</div>
 		</section>
-		<section class="gallery">
+		<section class="gallery js-animation">
 			<h1 class="gallery-title title-l">галерея</h1>
 			<div class="gallery-slider" >
 				<div class="slider-container" data-show="3" data-variable="true">
@@ -103,7 +106,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="clients">
+		<section class="clients js-animation">
 			<h1 class="clients-title title-l">Наши клиенты</h1>
 			<div class="clients-slider">
 				<div class="slider-container" data-variable="true">
@@ -119,7 +122,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="price">
+		<section class="price js-animation">
 			<img class="price-background" src="img/price-background.png">
 			<h1 class="price-title title-l">Цены</h1>
 			<div class="price-container flex-s">
@@ -133,7 +136,7 @@
 					<span class="price__workers">1 Кальянщик</span>
 					<span class="price__rate">3 часа – 6 500 руб.</span>
 					<span class="price__rate">5 часов – 8 500 руб</span>
-					<button class="standart-btn price__btn">заказать</button>
+					<button class="standart-btn price__btn modal-btn" data-target="catering">заказать</button>
 				</div>
 				<div class="price-item flex-column">
 					<div class="price__icons">
@@ -146,7 +149,7 @@
 					<span class="price__workers">1 Кальянщик</span>
 					<span class="price__rate">3 часа – 7 500 руб.</span>
 					<span class="price__rate">5 часов – 9 500 руб</span>
-					<button class="standart-btn price__btn">заказать</button>
+					<button class="standart-btn price__btn modal-btn" data-target="catering">заказать</button>
 				</div>
 				<div class="price-item flex-column">
 					<div class="price__icons">
@@ -160,7 +163,7 @@
 					<span class="price__workers">2 Кальянщик</span>
 					<span class="price__rate">3 часа – 11 500 руб.</span>
 					<span class="price__rate">5 часов – 16 500 руб</span>
-					<button class="standart-btn price__btn">заказать</button>
+					<button class="standart-btn price__btn modal-btn" data-target="catering">заказать</button>
 				</div>
 				<div class="price-item flex-column">
 					<div class="price__icons">
@@ -175,11 +178,11 @@
 					<span class="price__workers">2 Кальянщик</span>
 					<span class="price__rate">3 часа – 14 500 руб.</span>
 					<span class="price__rate">5 часов – 19 500 руб</span>
-					<button class="standart-btn price__btn">заказать</button>
+					<button class="standart-btn price__btn modal-btn" data-target="catering">заказать</button>
 				</div>
 			</div>
 		</section>
-		<section class="events">
+		<section class="events js-animation">
 			<h1 class="title-l events-title">наши мероприятия</h1>
 			<div class="events-container" >
 				<div class="events__video" style="background-image: url(img/events-1.jpg);"></div>
@@ -191,7 +194,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="articles">
+		<section class="articles js-animation">
 			<h1 class="title-l articles-title">полезные статьи</h1>
 			<div class="articles-container flex-c">
 				<div class="articles-slider">
@@ -268,9 +271,9 @@
 				<div class="articles-img"><img src="img/articles-img.png" alt=""></div>
 			</div>
 		</section>
-		<section class="contacts">
+		<section class="contacts ">
 			<h1 class="contacts-title title-l">Контакты</h1>
-			<address class="address flex-between mx-auto">
+			<address class="address flex-between mx-auto js-animation">
 				<div class="address-item flex-column">
 					<p>Телефон для связи с нами:</p>
 					<span><a class="address__link" href="tel:+7 495 374-61-62">+7 (495) 374-61-62</a></span>
@@ -294,15 +297,15 @@
 				</div>
 			</address>
 			<div class="contacts-container flex-s">
-				<div class="contacts-form flex-s">
+				<div class="contacts-form flex-s js-animation">
 					<h2 class="title-m title-m_black">свяжитесь с нами</h2>
 					<input type="text" class="contacts__name contacts__input" placeholder="Имя">
 					<input type="text" class="contacts__communication contacts__input" placeholder="Контакт для связи*" required="">
 					<textarea cols="30" rows="10" class="contacts__text contacts__input" placeholder="Ваше сообщение"></textarea>
-					<label class="contacts__consent"><input type="checkbox"><span>Даю согласие на <a href="#">обработку своих персональных данных.</a></span></label>
+					<label class="contacts__consent"><input type="checkbox"><span>Даю согласие на <a href="documents/personal.html">обработку своих персональных данных.</a></span></label>
 					<button class="standart-btn contacts-btn">Отправить</button>
 				</div>
-				<div class="contacts-img"><img src="img/contacts-img.png" alt=""></div>
+				<div class="contacts-img js-animation"><img src="img/contacts-img.png" alt=""></div>
 			</div>
 		</section>
 		<div class="scroll-up icon-slick-next flex-c-c"></div>
@@ -340,8 +343,8 @@
 				<img src="img/footer-logo.png" alt="">
 			</div>
 			<span class="footer__copyrights">VsemKalyan 2019 | Все права защищены</span>
-			<a href="#">Политика конфиденциальности</a>
-			<a href="#">Обработка персональных данных</a>
+			<a href="documents/politics.html">Политика конфиденциальности</a>
+			<a href="documents/personal.html">Обработка персональных данных</a>
 		</div>
 	</footer>
 	<script src="script/jquery.js"></script>

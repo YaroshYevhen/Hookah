@@ -6,18 +6,41 @@
 	.address__link:hover {
 		color: #26c2cf;
 	}
+	.slick-arrow:hover,
+	.scroll-up:hover {
+		color: #26c2cf;
+	}
 	.standart-btn:hover {
 		transform: scale(1.05);
 		background-color: #28cbd9;
 	}
 	.articles-item:hover {
-		
+		.articles__more {
+			text-decoration: underline #bcbcbc;
+			font-size: 18px;
+		}
+	}
+	.articles-open__back:hover {
+		font-size: 18px;
+		&:before {
+			width: 7px;
+			height: 7px;
+		}
 	}
 	.contacts__consent:hover span:before {
 		background-color: #f7f7f7;
 	}
-	.socials__item:hover {
+	.icon-inst:hover {
 		color: #ff29de;
+	}
+	.icon-fb:hover {
+		color: #3b5998;
+	}
+	.icon-vb:hover {
+		color: #574e92;
+	}
+	.icon-wa:hover {
+		color: #00e676;
 	}
 	.footer a:hover {
 		color: #fff;
@@ -207,17 +230,24 @@
 			}
 		}
 		&-img {
-			order: -1;
 			width: 690px;
 			height: 450px;
 			margin-bottom: 60px;
 		}
 		&-text {
+			order: 1;
 			width: 100%;
 			max-width: 720px;
 			margin-right: 0;
 			padding-left: 15px;
 			padding-right: 15px;
+		}
+		&__title {
+			display: none;
+		}
+		&__title_tablet {
+			text-align: center;
+			display: block;
 		}
 	}
 	.about-item:nth-of-type(even) .about-text {
@@ -427,10 +457,6 @@
 			}
 		}
 	}
-	.scroll-up {
-		right: 15px;
-		bottom: 255px;
-	}
 	.modal {
 		.contacts-form {
 			width: 500px;
@@ -519,6 +545,10 @@
 			&.show {
 				max-height: 600px;
 			}
+		}
+		&__more {
+			display: block;
+			margin-top: 15px;
 		}
 	}
 	.gallery {
@@ -636,7 +666,10 @@
 		}
 		&__consent {
 			span::before {
-				top: 1px;
+				top: 10px;
+			}
+			input:checked + span:after {
+				top: 14px;
 			}
 		}
 		&-btn {
@@ -664,22 +697,25 @@
 		}
 	}
 	.modal {
+		&__title {
+			font-size: 28px;
+		}
 		.contacts-form {
 			max-width: 360px;
 			padding: 45px 30px;
 			border-radius: 0;
 		}
 		.contacts__name {
-			margin-top: 20px;
+			margin-top: 25px;
 		}
 		.contacts__communication {
-			margin-top: 15px;
+			margin-top: 20px;
 		}
 		.contacts__text {
-			margin-top: 15px;
+			margin-top: 20px;
 		}
 		&__btn {
-			margin-top: 20px;
+			margin-top: 25px;
 		}
 	}
 }

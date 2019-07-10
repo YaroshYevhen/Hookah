@@ -12,13 +12,39 @@ APP.articlesSlider = $('.articles-slider .slider-container');
 APP.contactsInput = $('.contacts__input');
 APP.hamburger = $('.hamburger');
 APP.aboutMore = $('.about__more');
+APP.navItem = $('.nav__item');
 
 function closeModal(){
   APP.modal.removeClass('active');
   $('html').removeClass('overflow');
 };
 
+function doAnimation(){
+    var windowScroll = $(window).height() + APP.$document.scrollTop(),
+        element = APP.$document.find('.js-animation:not(.animate)')[0];
+
+  $('.js-animation:not(.animate)').each(function(key, item){
+      var itemOffset = $(item).offset().top + 100,
+          tableParent = $(item).parents('.palette-table');
+    if(windowScroll >= itemOffset){
+        $(item).addClass('animate');
+    }
+  });
+};
+
 APP.$document.ready(function() {
+	doAnimation ();
+  APP.$document.on('scroll', function(event){
+    doAnimation ();
+  });
+
+	APP.navItem.on('click', function(){
+		var section = $(this).data('scroll'),
+				scrollTo = $(section).position().top;
+
+		$('html').animate({ scrollTop: scrollTo }, 500);
+	});
+
 	APP.aboutMore.on('click', function(){
 		$(this).parents('.about-text').find('.about__description').addClass('show');
 		$(this).hide();
@@ -78,7 +104,7 @@ APP.$document.ready(function() {
   });
 
 	APP.$document.on('scroll', function(){
-		if($(this).scrollTop() >= 4500) {
+		if($(this).scrollTop() >= 1000) {
 			APP.scrollUp.addClass('show');
 		} else {
 			APP.scrollUp.removeClass('show');
