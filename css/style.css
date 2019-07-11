@@ -666,6 +666,10 @@ body.menu .nav {
   display: none;
 }
 
+.about__description {
+  width: 100%;
+}
+
 .about-img {
   width: calc(50% - 15px);
   height: 31.25vw;
