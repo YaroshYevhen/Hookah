@@ -45,7 +45,7 @@ $font-dir:'../fonts/';
 
 @font-face {
   font-family: 'Franklin';
-  src: url($font-dir + "Franklin/Franklin.ttf") format('ttf');
+  src: url($font-dir + "Franklin/Franklin.ttf") format('truetype');
   font-style: normal;
   font-weight: 600;
 }

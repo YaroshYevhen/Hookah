@@ -150,7 +150,7 @@ ul {
 
 @font-face {
   font-family: 'Franklin';
-  src: url("../fonts/Franklin/Franklin.ttf") format("ttf");
+  src: url("../fonts/Franklin/Franklin.ttf") format("truetype");
   font-style: normal;
   font-weight: 600;
 }
