@@ -755,6 +755,10 @@ body.menu {
     transform: scale(0.01);
     opacity: 0;
     transition: opacity .6s, transform .6s;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
   &-slider {
     margin-top: -194px;
@@ -768,6 +772,39 @@ body.menu {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     margin-left: 30px;
+    cursor: pointer;
+    position: relative;
+    &__play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 68px;
+      height: 48px;
+      margin-left: -34px;
+      margin-top: -24px;
+      -moz-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+      -webkit-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+      transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+      z-index: 63;
+      svg {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        path:first-of-type {
+          -moz-transition: fill .1s cubic-bezier(0.4,0.0,1,1),fill-opacity .1s cubic-bezier(0.4,0.0,1,1);
+          -webkit-transition: fill .1s cubic-bezier(0.4,0.0,1,1),fill-opacity .1s cubic-bezier(0.4,0.0,1,1);
+          transition: fill .1s cubic-bezier(0.4,0.0,1,1),fill-opacity .1s cubic-bezier(0.4,0.0,1,1);
+          fill: #212121;
+          fill-opacity: .8;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .slick-list {
     transform: translateX(100%);

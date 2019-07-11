@@ -24,6 +24,13 @@
     width: 7px;
     height: 7px;
   }
+  .events-item:hover .events-item__play path:first-of-type {
+    moz-transition: fill 0.1s cubic-bezier(0, 0, 0.2, 1), fill-opacity 0.1s cubic-bezier(0, 0, 0.2, 1);
+    -webkit-transition: fill 0.1s cubic-bezier(0, 0, 0.2, 1), fill-opacity 0.1s cubic-bezier(0, 0, 0.2, 1);
+    transition: fill 0.1s cubic-bezier(0, 0, 0.2, 1), fill-opacity 0.1s cubic-bezier(0, 0, 0.2, 1);
+    fill: #f00;
+    fill-opacity: 1;
+  }
   .contacts__consent:hover span:before {
     background-color: #f7f7f7;
   }

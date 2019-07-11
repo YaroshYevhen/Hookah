@@ -13,6 +13,10 @@ APP.contactsInput = $('.contacts__input');
 APP.hamburger = $('.hamburger');
 APP.aboutMore = $('.about__more');
 APP.navItem = $('.nav__item');
+APP.video = $('.events__video');
+APP.videoSlider = $('.events-slider');
+APP.videoPreview = $('.events-item');
+
 
 function closeModal(){
   APP.modal.removeClass('active');
@@ -33,6 +37,16 @@ function doAnimation(){
 };
 
 APP.$document.ready(function() {
+	APP.videoPreview.on('click', function(){
+		var src = $(this).data('src'),
+				srcCurrent = $(this).parents('.events-container').find('iframe').attr('src'),
+				img = 'https://img.youtube.com/vi/' + srcCurrent.split('embed/')[1] + '/0.jpg';
+
+		$(this).find('img').attr('src', img);
+		$(this).data('src', srcCurrent);
+		$(this).parents('.events-container').find('iframe').attr('src', src);
+	})
+
 	doAnimation ();
   APP.$document.on('scroll', function(event){
     doAnimation ();
