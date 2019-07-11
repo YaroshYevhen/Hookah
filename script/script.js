@@ -135,7 +135,7 @@ APP.$document.ready(function() {
 	});
 
 	APP.scrollUp.on('click', function(){
-		$('html').scrollTop(0);
+		$('html').animate({ scrollTop: 0 }, 500);
 	});
 
 	APP.slider.each(function(key, item) {
