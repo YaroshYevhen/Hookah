@@ -944,7 +944,7 @@ body.menu .nav {
   padding: 0 45px;
   opacity: 1;
   z-index: 1;
-  transition: opacity 1.2s, z-index 0s;
+  transition: opacity .6s, z-index 0s;
   transition-delay: 0s, 0s;
 }
 
