@@ -1083,7 +1083,6 @@ body.menu {
     border: 1px solid #f7f7f7;
     color: #0e0e0e;
     border-radius: 5px;
-    padding: 20px;
     transition: border .3s, background-color .3s, width .6s linear, opacity .6s;
     &::placeholder {
       color: #b3b3b3;
@@ -1100,14 +1099,17 @@ body.menu {
   }
   &__name {
     height: 52px;
+    padding: 0 20px;
   }
   &__communication {
     height: 52px;
+    padding: 0 20px;
     margin-top: 27px;
     transition-delay: 0s, 0s, .15s;
   }
   &__text {
     height: 120px;
+    padding: 20px;
     margin-top: 27px;
     resize: none;
     transition-delay: 0s, 0s, .3s;
