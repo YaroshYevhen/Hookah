@@ -158,6 +158,9 @@
   .hamburger {
     display: block;
   }
+  .header-tablet-bg {
+    display: block;
+  }
   .nav {
     width: 100%;
     height: calc(100vh - 90px);

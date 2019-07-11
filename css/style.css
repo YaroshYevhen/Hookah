@@ -496,6 +496,7 @@ body.menu .nav {
 }
 
 .header-tablet-bg {
+  display: none;
   position: absolute;
   left: 0;
   top: 0;

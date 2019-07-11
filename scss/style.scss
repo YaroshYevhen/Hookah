@@ -353,6 +353,7 @@ body.menu {
     transition: color .3s;
   }
   &-tablet-bg {
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
