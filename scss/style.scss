@@ -967,12 +967,12 @@ body.menu {
     z-index: 2;
     left: auto;
     right: -80px;
-    transform: translateY(calc(-100% - 25px));
+    transform: translateY(-85px);
     .icon-slick-prev {
       transform: rotate(90deg);
     }
     &:active {
-      transform: translateY(calc(-100% - 25px)) scale(.9) ;
+      transform: translateY(-85px) scale(.9) ;
     }
   }
   &-open {

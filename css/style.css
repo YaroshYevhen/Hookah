@@ -1172,7 +1172,7 @@ body.menu .nav {
   z-index: 2;
   left: auto;
   right: -80px;
-  transform: translateY(calc(-100% - 25px));
+  transform: translateY(-85px);
 }
 
 .articles .slick-prev .icon-slick-prev {
@@ -1180,7 +1180,7 @@ body.menu .nav {
 }
 
 .articles .slick-prev:active {
-  transform: translateY(calc(-100% - 25px)) scale(0.9);
+  transform: translateY(-85px) scale(0.9);
 }
 
 .articles-open {
