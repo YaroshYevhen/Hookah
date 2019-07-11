@@ -5,7 +5,9 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>Кальянный кейтеринг</title>
 	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/autoprefixer/style.css">
+
 	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
@@ -362,7 +364,8 @@
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          origin: 'https://yaroshyevhen.github.io/Hookah/',
+          height: '360',
+          width: '640',
           videoId: 'bZY5CkWgjWs',
           events: {
             'onReady': onPlayerReady,
