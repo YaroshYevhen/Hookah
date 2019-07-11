@@ -1106,6 +1106,7 @@ body.menu {
     margin-top: 27px;
     resize: none;
     transition-delay: 0s, 0s, .3s;
+    overflow: hidden;
   }
   &__consent {
     font-size: 16px;
