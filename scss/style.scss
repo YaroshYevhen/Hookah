@@ -105,6 +105,10 @@ $font-dir:'../fonts/';
 
 html {
   overflow-x: hidden;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
   &.overflow{
     height: auto;
     position: relative;
@@ -114,6 +118,8 @@ html {
       height: auto;
       position: relative;
       overflow: hidden !important;
+      margin: 0px;
+      padding: 0px;
     }
   }
 }

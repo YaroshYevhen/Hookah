@@ -218,6 +218,10 @@ ul {
 
 html {
   overflow-x: hidden;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 html.overflow {
@@ -231,6 +235,8 @@ html.overflow body {
   height: auto;
   position: relative;
   overflow: hidden !important;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
