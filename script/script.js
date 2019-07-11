@@ -167,6 +167,7 @@ APP.$document.ready(function() {
         breakpoint: 720,
         settings: {
           slidesToShow: attr('show-mobile'),
+          vertical: attr('vertical-mobile'),
           centerMode: false
         },
       }]
