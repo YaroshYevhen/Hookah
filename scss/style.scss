@@ -1104,6 +1104,7 @@ body.menu {
     cursor: pointer;
     z-index: 1;
     input {
+      display: none;
       &:checked {
         & + span:before {
           content: "";
