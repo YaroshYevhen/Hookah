@@ -186,10 +186,10 @@
 		<section class="events js-animation">
 			<h1 class="title-l events-title">наши мероприятия</h1>
 			<div class="events-container" >
-				<div class="events__video"><iframe width="1189" height="669" src="https://www.youtube.com/embed/bZY5CkWgjWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+				<div class="events__video"><div id="player"></div></div>
 				<div class="events-slider" dir="rtl">
 					<div class="slider-container" data-rtl="true" data-variable="true">
-						<div class="events-item" data-src="https://www.youtube.com/embed/1MdNSEN-48g"><div class="events-item__play"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></div><img src="https://img.youtube.com/vi/1MdNSEN-48g/0.jpg"></div>
+						<div class="events-item" data-id="1MdNSEN-48g"><div class="events-item__play"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></div><img src="https://img.youtube.com/vi/1MdNSEN-48g/0.jpg"></div>
 					</div>
 				</div>
 				
@@ -348,7 +348,49 @@
 			<a href="documents/personal.html">Обработка персональных данных</a>
 		</div>
 	</footer>
+	
 	<script src="script/jquery.js"></script>
+	<script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '360',
+          width: '640',
+          videoId: 'bZY5CkWgjWs',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.stopVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          $('.events-slider').addClass('hide');
+        } else {
+        	$('.events-slider').removeClass('hide');
+        }
+      }
+
+    </script>
 	<script src="script/slick.min.js"></script>
 	<script src="script/script.js"></script>
 </body>
