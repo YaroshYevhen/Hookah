@@ -45,7 +45,9 @@ $font-dir:'../fonts/';
 
 @font-face {
   font-family: 'Franklin';
-  src: url('https://nomail.com.ua/files/woff/082252176f1f4953cea2a7e5e9f300f4.woff') format('woff');
+  src: url($font-dir + "Franklin/Franklin.ttf");
+  font-style: normal;
+  font-weight: 600;
 }
 
 @font-face {
