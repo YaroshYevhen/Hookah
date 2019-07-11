@@ -1330,6 +1330,10 @@ body.menu .nav {
   z-index: 1;
 }
 
+.contacts__consent input {
+  display: none;
+}
+
 .contacts__consent input:checked + span:before {
   content: "";
   background-color: #ffd200;
