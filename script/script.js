@@ -29,8 +29,12 @@ function doAnimation(){
         element = APP.$document.find('.js-animation:not(.animate)')[0];
 
   $('.js-animation:not(.animate)').each(function(key, item){
-      var itemOffset = $(item).offset().top + 100,
-          tableParent = $(item).parents('.palette-table');
+    var itemOffset = $(item).offset().top + 100,
+        tableParent = $(item).parents('.palette-table');
+
+    if($(this).hasClass('price')){
+      itemOffset = $(item).offset().top + 500
+    }
     if(windowScroll >= itemOffset){
         $(item).addClass('animate');
     }

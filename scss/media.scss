@@ -175,6 +175,11 @@
 			display: block;
 		}
 	}
+	body.menu {
+		.nav-ul {
+			padding: 70px 0px;
+		}
+	}
 	.nav {
 		width: 100%;
 		height: calc(100vh - 90px);
@@ -194,7 +199,8 @@
 			justify-content: flex-start;
 			flex-wrap: nowrap;
 			background-color: #3b3b3b;
-			padding: 70px 0px;
+			padding: 0px;
+			transition: padding .6s;
 		}
 		&-li {
 			& + .nav-li {

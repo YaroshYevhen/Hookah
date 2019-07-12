@@ -432,6 +432,10 @@ input[type=text]::-ms-reveal {
   white-space: nowrap;
 }
 
+.display-mobile {
+  display: none;
+}
+
 .scroll-up {
   display: -webkit-box;
   display: -webkit-flex;
@@ -704,6 +708,7 @@ body.menu .nav {
 }
 
 .features__text {
+  width: calc(100% - 93px);
   font-size: 20px;
   color: #5c5c5c;
 }
@@ -1246,8 +1251,8 @@ body.menu .nav {
 }
 
 .articles-slider.hide .slick-prev {
-  -webkit-transform: translateY(calc(-100% - 25px)) scale(0.01);
-  transform: translateY(calc(-100% - 25px)) scale(0.01);
+  -webkit-transform: translateY(-85px) scale(0.01);
+  transform: translateY(-85px) scale(0.01);
 }
 
 .articles-slider.hide .slick-next {
