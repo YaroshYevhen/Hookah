@@ -82,10 +82,12 @@ APP.$document.ready(function() {
 	});
 
 	APP.hamburger.on('click', function(){
+    if(!$(this).hasClass('active')){
+      $('.nav-ul').scrollTop(0);
+    }
     $(this).toggleClass('active');
     $('body').toggleClass('menu');
     $('html').toggleClass('overflow');
-    $('.nav-ul').scrollTop(0);
   });
   
 	APP.modal.on('click', function(event){
