@@ -13,16 +13,16 @@
     transform: scale(1.05);
     background-color: #28cbd9;
   }
+  .articles-item:hover .articles__subtitle {
+    color: #26c2cf;
+  }
   .articles-item:hover .articles__more {
-    text-decoration: underline #bcbcbc;
-    font-size: 18px;
+    text-decoration: underline #26c2cf;
+    color: #26c2cf;
   }
-  .articles-open__back:hover {
-    font-size: 18px;
-  }
-  .articles-open__back:hover:before {
-    width: 7px;
-    height: 7px;
+  .articles-open__back:hover span {
+    text-decoration: underline #26c2cf;
+    color: #26c2cf;
   }
   .events-item:hover .events-item__play path:first-of-type {
     moz-transition: fill 0.1s cubic-bezier(0, 0, 0.2, 1), fill-opacity 0.1s cubic-bezier(0, 0, 0.2, 1);
@@ -639,6 +639,9 @@
   .articles .slick-next {
     bottom: -78px;
     transform: translateX(41px);
+  }
+  .articles .slick-next:active {
+    transform: translateX(41px) scale(0.9);
   }
   .articles-open__photo {
     float: none;

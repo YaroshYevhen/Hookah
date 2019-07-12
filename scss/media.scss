@@ -15,16 +15,18 @@
 		background-color: #28cbd9;
 	}
 	.articles-item:hover {
+		.articles__subtitle {
+			color: #26c2cf;
+		}
 		.articles__more {
-			text-decoration: underline #bcbcbc;
-			font-size: 18px;
+			text-decoration: underline #26c2cf;
+			color: #26c2cf;
 		}
 	}
 	.articles-open__back:hover {
-		font-size: 18px;
-		&:before {
-			width: 7px;
-			height: 7px;
+		span {
+			text-decoration: underline #26c2cf;
+			color: #26c2cf;
 		}
 	}
 	.events-item:hover {
@@ -684,6 +686,9 @@
 		.slick-next {
 			bottom: -78px;
 			transform: translateX(41px);
+			&:active {
+				transform: translateX(41px) scale(0.9);
+			}
 		}
 		&-open {
 			&__photo {
