@@ -42,7 +42,6 @@ function doAnimation(){
 };
 
 APP.$document.ready(function() {
-
 	APP.videoPreview.on('click', function(){
 		var id = $(this).data('id'),
 				idCurrent = player.b.b.videoId;
