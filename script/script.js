@@ -69,7 +69,7 @@ APP.$document.ready(function() {
 		var section = $(this).data('scroll'),
 				scrollTo = $(section).offset().top;
 
-		$('html').animate({ scrollTop: scrollTo }, 500);
+		$('html').removeClass('overflow').animate({ scrollTop: scrollTo }, 500);
 		$('body').removeClass('menu');
 		APP.hamburger.removeClass('active');
 	});
@@ -82,6 +82,7 @@ APP.$document.ready(function() {
 	APP.hamburger.on('click', function(){
     $(this).toggleClass('active');
     $('body').toggleClass('menu');
+    $('html').toggleClass('overflow');
   });
   
 	APP.modal.on('click', function(event){
