@@ -121,7 +121,6 @@ APP.$document.ready(function() {
 		APP.articleOpen.find('.articles__date').text(date);
 		APP.articlesSlider.addClass('hide');
 		APP.articleOpen.addClass('opened');
-
 	});
 
   APP.closeModal.on('click', function() {
@@ -151,7 +150,6 @@ APP.$document.ready(function() {
 
 	APP.scrollUp.on('click', function(){
 		$('html, body').animate({ scrollTop: 0 }, 500);
-    // $(document).scrollTop(0);
 	});
 
 	APP.slider.each(function(key, item) {
@@ -160,7 +158,6 @@ APP.$document.ready(function() {
       variableWidth: attr('variable')? attr('variable') : false,
       vertical: attr('vertical')? attr('vertical') : false,
       slidesToShow: attr('show'),
-      slidesToScroll: attr('scroll')? attr('show') : 1,
       arrows: true,
       rtl: attr('rtl')? attr('rtl') : false,
       nextArrow: '<button class="slick-next slick-arrow flex-c-c"><i class="icon-slick-next"></i></button>',
@@ -169,14 +166,12 @@ APP.$document.ready(function() {
         breakpoint: 1400,
         settings: {
           slidesToShow: attr('show-small'),
-          centerMode: false
         },
       },
       {
         breakpoint: 1140,
         settings: {
           slidesToShow: attr('show-tablet'),
-          centerMode: false
         },
       },
       {
@@ -184,7 +179,6 @@ APP.$document.ready(function() {
         settings: {
           slidesToShow: attr('show-mobile'),
           vertical: attr('vertical-mobile'),
-          centerMode: false
         },
       }]
     };
