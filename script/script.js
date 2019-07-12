@@ -20,6 +20,7 @@ APP.videoPreview = $('.events-item');
 
 function closeModal(){
   APP.modal.removeClass('active');
+  $('.modal__subtitle').removeClass('show')
   $('html').removeClass('overflow');
 };
 
@@ -118,9 +119,14 @@ APP.$document.ready(function() {
     closeModal();
   });
 
-  APP.modalBtn.on('click', function() {
+  APP.modalBtn.on('click', function(event) {
     var attr = $(this).attr('data-target'),
         modal = $('.modal[data-target="' + attr + '"]');
+
+    if($(event.target).hasClass('price__btn')){
+    	let size = $(this).parents('.price-item').find('.price__size').text();
+    	$('.modal__subtitle').addClass('show').text('(' + size + ')');
+    };
 
     modal.addClass('active');
     $('html').addClass('overflow'); 

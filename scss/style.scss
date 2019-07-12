@@ -1274,6 +1274,19 @@ body.menu {
     line-height: 1;
     text-align: center;
   }
+  &__subtitle {
+    display: none;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    margin-top: 10px;
+    &.show {
+      display: block;
+    }
+  }
   &__btn {
     margin-top: 30px;
   }

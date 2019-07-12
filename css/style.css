@@ -1526,6 +1526,21 @@ body.menu .nav {
   text-align: center;
 }
 
+.modal__subtitle {
+  display: none;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modal__subtitle.show {
+  display: block;
+}
+
 .modal__btn {
   margin-top: 30px;
 }
