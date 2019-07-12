@@ -146,8 +146,8 @@ APP.$document.ready(function() {
 	});
 
 	APP.scrollUp.on('click', function(){
-		// $('html').animate({ scrollTop: 0 }, 500);
-    $('html').scrollTop(0);
+		$(document).animate({ scrollTop: 0 }, 500);
+
 	});
 
 	APP.slider.each(function(key, item) {
