@@ -376,23 +376,25 @@ input[type=text]::-ms-reveal {
 }
 
 .scroll-up {
-  display: none;
+  display: flex;
   width: 48px;
   height: 48px;
   background-color: #3b3b3b;
   font-size: 24px;
-  transform: rotate(-90deg);
   color: #fff;
   cursor: pointer;
   position: fixed;
   right: 30px;
   bottom: 30px;
+  opacity: 0;
   z-index: 100;
-  transition: color .3s;
+  transform: rotate(-90deg) translateX(-78px);
+  transition: opacity .3s, transform .3s, color .3s;
 }
 
 .scroll-up.show {
-  display: flex;
+  opacity: 1;
+  transform: rotate(-90deg) translateX(0);
 }
 
 /**************/

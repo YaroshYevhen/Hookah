@@ -242,22 +242,18 @@ input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
   height: 48px;
   background-color: #3b3b3b;
   font-size: 24px;
-  transform: rotate(-90deg);
   color: #fff;
   cursor: pointer;
   position: fixed;
   right: 30px;
   bottom: 30px;
-  transition: color .3s;
   opacity: 0;
   z-index: 100;
-  transform: translateY(60px);
-  transition: opacity .3s, z-index 0s, transform .3s;
-  /*transition-delay: */
+  transform: rotate(-90deg) translateX(-78px);
+  transition: opacity .3s, transform .3s, color .3s;
   &.show {
     opacity: 1;
-    z-index: 100;
-    transform: translateY(0);
+    transform: rotate(-90deg) translateX(0);
   }
 }
 
