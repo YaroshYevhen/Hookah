@@ -187,6 +187,7 @@
     background-color: #3b3b3b;
     padding: 0px;
     transition: padding .6s;
+    overflow-y: scroll;
   }
   .nav-li + .nav-li {
     margin-top: 30px;

@@ -201,6 +201,7 @@
 			background-color: #3b3b3b;
 			padding: 0px;
 			transition: padding .6s;
+			overflow-y: scroll;
 		}
 		&-li {
 			& + .nav-li {
