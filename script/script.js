@@ -69,7 +69,8 @@ APP.$document.ready(function() {
 		var section = $(this).data('scroll'),
 				scrollTo = $(section).offset().top;
 
-		$('html').removeClass('overflow').animate({ scrollTop: scrollTo }, 500);
+		$('html').removeClass('overflow');
+    $('html, body').animate({ scrollTop: scrollTo }, 500);
 		$('body').removeClass('menu');
 		APP.hamburger.removeClass('active');
 	});
