@@ -644,6 +644,9 @@
 				.slick-arrow {
 					transition-delay: 0s;
 				}
+				.slick-next {
+					transform: translateX(41px) scale(0.01);
+				}
 			}
 			.slick-arrow {
 				transition-delay: .3s;

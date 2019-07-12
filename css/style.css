@@ -1087,7 +1087,7 @@ body.menu .nav {
 }
 
 .articles-slider.hide .slick-prev {
-  transform: translateY(calc(-100% - 25px)) scale(0.01);
+  transform: translateY(-85px) scale(0.01);
 }
 
 .articles-slider.hide .slick-next {

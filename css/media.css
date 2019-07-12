@@ -603,6 +603,9 @@
   .articles-slider.hide .slick-arrow {
     transition-delay: 0s;
   }
+  .articles-slider.hide .slick-next {
+    transform: translateX(41px) scale(0.01);
+  }
   .articles-slider .slick-arrow {
     transition-delay: .3s;
   }
