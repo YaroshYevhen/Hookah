@@ -32,8 +32,8 @@ function doAnimation(){
     var itemOffset = $(item).offset().top + 100,
         tableParent = $(item).parents('.palette-table');
 
-    if($(this).hasClass('price')){
-      itemOffset = $(item).offset().top + 500
+    if($(this).hasClass('price') && $(window).width() >= '1139'){
+      itemOffset = $(item).offset().top + 400
     }
     if(windowScroll >= itemOffset){
         $(item).addClass('animate');
