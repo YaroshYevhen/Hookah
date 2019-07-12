@@ -236,6 +236,10 @@ input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
   white-space: nowrap;
 }
 
+.display-mobile {
+  display: none;
+}
+
 .scroll-up {
   display: flex;
   width: 48px;
@@ -448,6 +452,7 @@ body.menu {
     margin-right: 20px;
   }
   &__text {
+    width: calc(100% - 93px);
     font-size: 20px;
     color: #5c5c5c;
   }

@@ -61,7 +61,8 @@
     width: 1110px;
   }
   .features {
-    width: 1110px;
+    width: 1140px;
+    padding: 0 15px;
     margin-bottom: 150px;
   }
   .about {
@@ -201,7 +202,7 @@
   }
   .features {
     flex-wrap: wrap;
-    width: 690px;
+    width: 720px;
     margin-bottom: 95px;
   }
   .features-item {
@@ -469,6 +470,9 @@
 
 /********* max-width: 719px *********/
 @media (max-width: 719px) {
+  .display-mobile {
+    display: block;
+  }
   .slick-arrow {
     width: 36px;
     height: 36px;
@@ -489,7 +493,8 @@
     margin-bottom: 180px;
   }
   .features {
-    width: 330px;
+    width: 100%;
+    max-width: 400px;
     margin-bottom: 70px;
   }
   .features-item {
@@ -518,12 +523,9 @@
     width: 145%;
   }
   .about-img {
-    width: 330px;
-    height: 215px;
+    width: 100%;
+    height: 60vw;
     margin-bottom: 30px;
-  }
-  .about-text {
-    max-width: 360px;
   }
   .about__title {
     margin-bottom: 25px;
@@ -589,7 +591,7 @@
   }
   .articles-slider {
     height: 350px;
-    width: 360px;
+    width: 100%;
     margin-bottom: 55px;
     transition: height .3s;
     transition-delay: 0s;
@@ -616,8 +618,8 @@
     width: 100%;
   }
   .articles-img {
-    width: 330px;
-    height: 220px;
+    width: calc(100% - 30px);
+    height: 61vw;
   }
   .articles .slick-slide {
     margin-bottom: 0;
@@ -645,9 +647,6 @@
     height: 36px;
     font-size: 18px;
   }
-  .contacts-form {
-    width: 360px;
-  }
   .contacts-form.animate .contacts__name {
     width: 100%;
   }
@@ -668,6 +667,9 @@
   }
   .contacts__text {
     margin-top: 20px;
+  }
+  .contacts__consent {
+    width: 100%;
   }
   .contacts__consent span::before {
     top: 10px;
